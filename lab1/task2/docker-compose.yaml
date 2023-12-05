@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  lite-server_container:
+    image: node
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: sh -c "npm install -g lite-server && lite-server --config bs-config.json --no-open"
