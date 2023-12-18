@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  spark:
+    build:
+      context: ./
+    environment:
+      - PYSPARK_MAJOR_PYTHON_VERSION=3
+    volumes:
+      - ./mounted_dir:/lab
